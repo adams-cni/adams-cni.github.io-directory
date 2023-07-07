@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="modal" class="modal">
+<div id="modal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
           <h2>Warning!</h2>
@@ -19,8 +19,27 @@
         </div>
       </div>    
     
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <div class="active"><img height="44" src="CNIMin.svg"></div>
+      <!-- Navigation links (hidden by default) -->
+      <div id="myLinks">
+          <a href="index.html"><b>Home</b></a>
+          <a href="https://capitolnewsillinois.com/NEWS"><b>News</b></a>
+          <a href="project.html">About the Index</a>
+          <a href="https://capitolnewsillinois.com/ABOUT-US/About-Capitol-News">Capitol News Illinois</a>
+      </div>
+      <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+      <a href="javascript:void(0);" class="icon" onclick="topnav()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+    
   <div class="box">
-    <img width=75% style="padding:0px 5px 20px" src="https://drive.google.com/uc?id=1FJNd-YhTKxHL9B1YwMNcr0GgwfyNcagQ"/></a>
+    <img width=75% style="padding:0px 5px 20px" src="https://drive.google.com/uc?id=1FJNd-YhTKxHL9B1YwMNcr0GgwfyNcagQ"/>
     <a href="index.html"><b>Home</b></a>
     <a href="https://capitolnewsillinois.com/NEWS"><b>News</b></a>
     <div href="#dropdown" class="dropdown"> 
@@ -113,6 +132,7 @@
 
 <script type="text/javascript" src="modal.js"></script>
 <script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="topnav.js"></script>
 
 </body>
 </html>
