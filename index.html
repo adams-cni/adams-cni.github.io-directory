@@ -4,13 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>People Directory</title>
+  <title>Public Officials Index</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="directory_style.css">
 </head>
 
 <body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Warning!</h2>
+          <p>This is not a finished product. This is a pre-alpha build and uses dummy data and filler text. Capitol News Illinois does not promise accuracy in any of its contents. Questions? Contact <a style="text-decoration:none;color:inherit" href="mailto:aadams@capitolnewsillinois.com"><b>Andrew Adams</b></a></p>
+        </div>
+      </div>    
+    
   <div class="box">
     <img width=75% style="padding:0px 5px 20px" src="https://drive.google.com/uc?id=1FJNd-YhTKxHL9B1YwMNcr0GgwfyNcagQ"/></a>
     <a href="index.html"><b>Home</b></a>
@@ -26,7 +34,7 @@
     </div>     
     </div>
   
-  <h1 style="text-align:left;margin-left:calc(100%/3);padding-top:2.5%">Public Officials Directory</h1>
+  <h1 style="text-align:left;margin-left:calc(100%/3);padding-top:2.5%">Public Officials Index</h1>
   <br>
   <div class="copy">
     Capitol News Illinois exists to bring credible and unbiased coverage of state government to the people of Illinois. As part of this mission, we want to make it easy to understand who oversees state government. This directory will tell you exactly who leads each of the state's three branches of government and provide information about them, their role, their campaign finances and conflicts of interest.
@@ -103,6 +111,7 @@
     </table>
   </div>
 
+<script type="text/javascript" src="modal.js"></script>
 <script type="text/javascript" src="main.js"></script>
 
 </body>
