@@ -78,6 +78,10 @@
         .box{
             display:none;
         }
+        .pad{
+            display:none;
+        }
+        
     }
 
     @media (min-width: 767px) { 
