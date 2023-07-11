@@ -6,7 +6,7 @@
   <title>Person Details</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="directory_style.css">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" href="favicon.svg">
   <style>
     /* Add your custom CSS styles here */
     body {
@@ -46,6 +46,7 @@
       margin-bottom: 1rem;
     }
   </style>
+    <script type="text/javascript" src="peopleData.js"> </script>
 </head>
 <body>
     <!-- Top Navigation Menu -->
@@ -65,19 +66,19 @@
       </a>
     </div>
     
-  <div class="box">
-    <img width=75% style="padding:0px 5px 20px" src="https://drive.google.com/uc?id=1FJNd-YhTKxHL9B1YwMNcr0GgwfyNcagQ"/></a>
-    <a href="index.html"><b>Home</b></a>
-    <a href="https://capitolnewsillinois.com/NEWS"><b>News</b></a>
-    <div href="#dropdown" class="dropdown"> 
-      <button class="dropbtn"><b>About</b>
-      <i class="fa fa-caret-down"></i>
-    </button>
-      <div class="dropdown-content">
-      <a href="project.html">Project</a>
-      <a href="https://capitolnewsillinois.com/ABOUT-US/About-Capitol-News">Capitol News Illinois</a>
-    </div>
-    </div>     
+    <div class="box">
+        <img width=75% style="padding:0px 5px 20px" src="https://drive.google.com/uc?id=1FJNd-YhTKxHL9B1YwMNcr0GgwfyNcagQ"/>
+        <a href="index.html"><b>Home</b></a>
+        <a href="https://capitolnewsillinois.com/NEWS"><b>News</b></a>
+        <div href="#dropdown" class="dropdown"> 
+            <button class="dropbtn"><b>About</b>
+            <i class="fa fa-caret-down"></i>
+            </button>
+        <div class="dropdown-content">
+            <a href="project.html">Project</a>
+            <a href="https://capitolnewsillinois.com/ABOUT-US/About-Capitol-News">Capitol News Illinois</a>
+        </div>
+        </div>     
     </div>
 
     <div pad><br><br></div>    
@@ -101,40 +102,34 @@
       <strong>City:</strong> <span id="city"></span>
     </div>
     <div class="details-item">
-      <strong>Country:</strong> <span id="country"></span>
-    </div>
-    <div class="details-item">
-      <strong>Postal Code:</strong> <span id="postalCode"></span>
+      <strong>Category:</strong> <span id="category"></span>
     </div>
   </div>
-
-<a href="#" class="back-button">Back</a>
-  
-  <script>
-    const urlParams = new URLSearchParams(window.location.search);
-    const nameElement = document.getElementById('name');
-    const emailElement = document.getElementById('email');
-    const phoneElement = document.getElementById('phone');
-    const addressElement = document.getElementById('address');
-    const cityElement = document.getElementById('city');
-    const countryElement = document.getElementById('country');
-    const postalCodeElement = document.getElementById('postalCode');
     
-    nameElement.textContent = urlParams.get('name');
-    emailElement.textContent = urlParams.get('email');
-    phoneElement.textContent = urlParams.get('phone');
-    addressElement.textContent = urlParams.get('address');
-    cityElement.textContent = urlParams.get('city');
-    countryElement.textContent = urlParams.get('country');
-    postalCodeElement.textContent = urlParams.get('postalCode');
+    <a href="dir_v6.html" class="back-button">Back</a>
+    
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);   
+        const personID = urlParams.get('id');
+        const person = peopleData.find((obj) => obj.id === personID);
 
-    // Handle the click event of the "Back" button
-    const backButton = document.querySelector('.back-button');
-    backButton.addEventListener('click', (event) => {
-      event.preventDefault();
-      window.history.back();
-    });
+        document.getElementById('name').textContent = person.name;
+        document.getElementById('email').textContent = person.email;
+        document.getElementById('phone').textContent = person.phone;
+        document.getElementById('address').textContent = person.address;
+        document.getElementById('city').textContent = person.city;
+        document.getElementById('category').textContent = person.category;
 
-  </script>
+
+        // Handle the click event of the "Back" button
+        const backButton = document.querySelector('.back-button');
+        if (backButton){
+            backButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            window.history.back();
+            });;
+        }
+    </script>
+  
 </body>
 </html>
