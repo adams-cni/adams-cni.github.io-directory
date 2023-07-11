@@ -1,22 +1,25 @@
-    // Sample dataset of 300 people (replace this with your own dataset)
-    const peopleData = [{
+
+// Sample dataset of 300 people (replace this with your own dataset)
+    const peopleData2 = [{
+        id: 1,
         name: 'Andrew Adams',
         email: 'john@example.com',
         phone: '123-456-7890',
         address: '124 N Road Ave, Chicago, IL, 60640',
-        category: 'Legislative'
+        category: 'Legislative',
       },
       {
+        id: 2,
         name: 'Beth Huntsdorfer',
         email: 'jane@example.com',
         phone: '987-654-3210',
-        category: 'State Agencies'
+        category: 'State Agencies',
       },
       {
         name: 'Hannah Meisel',
         email: 'john@example.com',
         phone: '123-456-7890',
-        category: 'Constitutional Officers'
+        category: 'Constitutional Officers',
       },
       {
         name: 'Peter Hancock',
@@ -68,6 +71,7 @@
       },
       // ... Add the remaining 295 people data objects here
     ];
+
     // Function to the directory entries for a specific category
     function renderDirectory(category, people) {
       const peopleList = document.getElementById(`${category.toLowerCase().replace(/\s/g, '-')}-people-list`);
@@ -78,7 +82,7 @@
           const nameCell = document.createElement('td');
           const nameLink = document.createElement('a');
           nameLink.textContent = person.name;
-          nameLink.href = `details_v2.html?name=${encodeURIComponent(person.name)}&email=${encodeURIComponent(person.email)}&phone=${encodeURIComponent(person.phone)}`;
+          nameLink.href = `details_v2.html?id=${encodeURIComponent(person.id)}`;
           nameLink.target = '_blank';
           nameLink.classList.add('name-link');
           nameCell.appendChild(nameLink);
